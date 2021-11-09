@@ -1,7 +1,8 @@
 //C++ PROGRAM TO MATRIX: ADDITION, SUBTRACTION, MULTIPLICATION AND TRANSPOSE
 
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+//#include<conio.h>
+using namespace std;
 #define s 20
 class matrix
 {
@@ -92,8 +93,8 @@ matrix matrix::operator*(matrix b)
    for(int i=0;i<s;i++)
       for(int j=0;j<s;j++)
          r.a[i][j]=0;
-   for(i=0;i<x;i++)
-      for(j=0;j<b.y;j++)
+   for(int i=0;i<x;i++)
+      for(int j=0;j<b.y;j++)
          for(int k=0;(k<y)||(k<b.x);k++)
             r.a[i][j]+=a[i][k]*b.a[k][j];
 
@@ -114,14 +115,13 @@ matrix matrix::transpose()
 
 int main()
 {
-   clrscr();
    char op;
    matrix a,b,c;
    int t=1;
    while(t)
    {
       cout<<"\tSelect Option\n\n1.Matrix Addition\n2.Matrix Subtration\n3.Matrix Multiplication\n4.Matrix Transponse\n5.Exit\n";
-      op=getch();
+      cin>>op;
       switch(op)
       {
         case '1':
@@ -158,8 +158,6 @@ int main()
          default:
          cout<<"\n\tEnter a valid option\n";
       }
-      getch();
    }
-   getch();
    return 0;
 }
