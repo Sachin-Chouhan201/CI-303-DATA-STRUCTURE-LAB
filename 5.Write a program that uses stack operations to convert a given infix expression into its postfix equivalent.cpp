@@ -1,4 +1,4 @@
-//9.Write a program that uses stack operations to convert a given infix expression into its postfix equivalent
+//5.Write a program that uses stack operations to convert a given infix expression into its postfix equivalent
 //Infix To Postfix Conversion using Stack in C++
 // C++ Program infix to postfix expression using stack (array) in data structure
 #include<iostream>
